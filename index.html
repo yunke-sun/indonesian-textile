@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Resonance of Wisdom</title>
+    <style>
+        body {
+            background-color:#030727;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-family: serif;
+        }
+
+        h2{
+            color:floralwhite;
+        }
+        p{color:whitesmoke}
+
+    </style>
+</head>
+
+
+<body>
+<script>
+
+    if ("geolocation" in navigator) {
+    console.log('geolocation available');
+    navigator.geolocation.getCurrentPosition(position=>{
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        document.getElementById('latitude').textContent= lat;
+        document.getElementById('longitude').textContent= lon;
+        //console.log(position);
+    });
+
+} else {
+    /* geolocation IS NOT available */
+    }</script>
+
+
+
+<h1> Mapping of the Batik Textile of Central Java </h1>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<iframe width="1200" height="600" align="center" src="https://maphub.net/embed/78197?legend=1&panel=1" frameborder="0"></iframe>
+
+<h2> your location now </h2>
+<p> latitude: <span id="latitude"> </span>&deg;<br/>
+    longitude:<span id="longitude"> </span>&deg;
+</p>
+
+</body>
+</html>
